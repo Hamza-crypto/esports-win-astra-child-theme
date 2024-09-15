@@ -32,3 +32,10 @@ add_action('wp_enqueue_scripts', 'child_enqueue_styles', 15);
  * Include additional scripts
  */
 require_once __DIR__ . '/_inc/scripts.php';
+
+
+function home_url_shortcode()
+{
+    return esc_url(home_url());
+}
+add_shortcode('home_url', 'home_url_shortcode');
