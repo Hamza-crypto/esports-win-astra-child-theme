@@ -12,6 +12,7 @@ function enqueue_swiper_assets()
         wp_enqueue_style('custom-404-style', get_stylesheet_directory_uri() . '/assets/css/404-style.css');
     }
 
+    wp_enqueue_script('bottom-sticky-section', get_stylesheet_directory_uri() . '/assets/js/bottom-sticky-section.js', [], null, true);
 
 }
 add_action('wp_enqueue_scripts', 'enqueue_swiper_assets');
