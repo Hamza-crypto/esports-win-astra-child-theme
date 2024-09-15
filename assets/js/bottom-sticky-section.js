@@ -1,6 +1,11 @@
 jQuery(document).ready(function ($) {
    
-    // Fetch the rating from the element with ID "over_all_ratings"
+     var currentUrl = window.location.href;
+
+    // Check if the URL contains "betting-sites"
+    if (currentUrl.includes('betting-sites')) {
+
+            // Fetch the rating from the element with ID "over_all_ratings"
     var rating = $('#over_all_ratings').text();
 
     // Fetch the image URL and background color from the element with ID "img_box"
@@ -28,5 +33,7 @@ jQuery(document).ready(function ($) {
         } else {
             $('.bonus-section').fadeOut();
         }
-});
+    });
+    }
+
 });

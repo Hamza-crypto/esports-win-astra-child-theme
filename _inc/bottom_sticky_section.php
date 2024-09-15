@@ -24,9 +24,12 @@
         margin: 0 auto;
     }
 
+    .logo {
+        border-radius: 8px;
+    }
+
     .logo img {
         max-height: 40px;
-        border-radius: 8px;
     }
 
     .rating {
@@ -42,7 +45,9 @@
 
     .score {
         margin-top: 5px;
-        font-size: 1em;
+        font-size: 1.2em;
+        /* Bold rating */
+        font-weight: bold;
     }
 
     .offer .bonus-text {
@@ -51,7 +56,7 @@
     }
 
     .offer-activated .activated-btn {
-        padding: 8px 16px;
+        padding: 14px 28px;
         color: #28a745;
         border: 2px solid #28a745;
         border-radius: 5px;
@@ -60,17 +65,23 @@
         background-color: #f1f8f4;
     }
 
+
     .activated-btn a {
         text-decoration: none;
     }
 
+
+
     .bonus-button .get-bonus-btn {
         background-color: #28a745;
         color: #fff;
-        padding: 8px 16px;
+        padding: 16px 32px;
+        /* Larger padding for the bonus button */
         text-decoration: none;
-        font-size: 1em;
-        border-radius: 5px;
+        font-size: 1.2em;
+        /* Larger font size */
+        border-radius: 8px;
+        /* Larger border radius */
         transition: background-color 0.3s;
     }
 
@@ -126,7 +137,7 @@
         }
 
         .bonus-button .get-bonus-btn {
-            padding: 4px 8px;
+            padding: 8px 12px;
             font-size: 0.7em;
         }
     }
