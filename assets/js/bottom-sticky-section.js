@@ -9,8 +9,6 @@ jQuery(document).ready(function ($) {
 
     // Fetch the CTA URL from the buttons inside the element with ID "webs-bonus-cta-6"
     var ctaUrl = $('#webs-bonus-cta-6 a').attr('href');
-
-    // debugger;
     // Update the sticky bonus section with the fetched data
     $('.bonus-section .logo img').attr('src', imageUrl);
     $('.bonus-section .logo').css('background-color', backgroundColor);

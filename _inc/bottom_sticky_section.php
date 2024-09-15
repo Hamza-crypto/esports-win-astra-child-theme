@@ -25,7 +25,6 @@
 
     .logo img {
         max-height: 40px;
-        background-color: #000;
         border-radius: 8px;
     }
 
