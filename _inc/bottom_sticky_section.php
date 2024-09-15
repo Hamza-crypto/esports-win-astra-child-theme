@@ -6,7 +6,7 @@
     <style>
     .bonus-section {
         background-color: #ffffff;
-        padding: 2px 10px;
+        padding: 10px;
         border-top: 2px solid #e0e0e0;
         box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
         position: fixed;
@@ -17,8 +17,9 @@
 
     .bonus-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+        flex-wrap: nowrap;
         max-width: 1200px;
         margin: 0 auto;
     }
@@ -77,42 +78,17 @@
         background-color: #218838;
     }
 
+    /* Mobile styles */
     @media (max-width: 768px) {
         .bonus-container {
-            flex-wrap: wrap;
-            /* Allow elements to wrap to avoid overflow */
-            justify-content: space-evenly;
-            /* Distribute elements evenly */
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            text-align: left;
+            padding: 5px;
         }
 
         .logo img {
-            width: 80px;
-            /* Smaller logo size */
-        }
-
-        .rating {
-            font-size: 0.9rem;
-            /* Smaller text size */
-            margin-left: 5px;
-        }
-
-        .offer {
-            font-size: 1rem;
-            /* Smaller offer text */
-            margin-left: 5px;
-        }
-
-        .offer-activated {
-            font-size: 0.9rem;
-            /* Smaller 'activated' text */
-            margin-left: 5px;
-        }
-
-        .bonus-button a {
-            padding: 5px 10px;
-            /* Smaller button */
-            font-size: 0.9rem;
-            margin-left: 5px;
+            max-height: 30px;
         }
 
         .rating,
@@ -120,9 +96,38 @@
             display: none;
         }
 
-        .offer,
+        .offer {
+            flex-grow: 1;
+            padding: 0 10px;
+        }
+
+        .offer .bonus-text {
+            font-size: 0.9rem;
+        }
+
         .bonus-button {
-            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .bonus-button .get-bonus-btn {
+            padding: 5px 10px;
+            font-size: 0.8em;
+            white-space: nowrap;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .logo img {
+            max-height: 25px;
+        }
+
+        .offer .bonus-text {
+            font-size: 0.8rem;
+        }
+
+        .bonus-button .get-bonus-btn {
+            padding: 4px 8px;
+            font-size: 0.7em;
         }
     }
     </style>
@@ -130,12 +135,10 @@
 
 
 <body>
-    <div class="bonus-section"
-        style="display: none; position: fixed; bottom: 0; width: 100%; background-color: #fff; z-index: 9999;">
-        <div class="bonus-container"
-            style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+    <div class="bonus-section" style="display: none;">
+        <div class="bonus-container">
             <div class="logo">
-                <img src="" alt="Logo" style="max-height: 50px;">
+                <img src="" alt="Logo">
             </div>
             <div class="rating">
                 <span class="score">0/5</span>
@@ -150,9 +153,7 @@
                 </span>
             </div>
             <div class="bonus-button">
-                <a href="#" class="get-bonus-btn"
-                    style="background-color: #28a745; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Get
-                    Bonus</a>
+                <a href="#" class="get-bonus-btn">Get Bonus</a>
             </div>
         </div>
     </div>
