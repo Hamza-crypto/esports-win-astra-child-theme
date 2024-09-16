@@ -6,7 +6,8 @@ jQuery(document).ready(function ($) {
     if (currentUrl.includes('betting-sites')) {
 
             // Fetch the rating from the element with ID "over_all_ratings"
-        var rating = $('#over_all_ratings').text();
+        var rating = $('#over_all_ratings').text().trim();
+        var bonus= $('#bonus_title').text().trim();
 
         // Fetch the image URL and background color from the element with ID "img_box"
         var imageUrl = $('#img_box img').attr('src');
@@ -20,6 +21,8 @@ jQuery(document).ready(function ($) {
         $('.bonus-section .rating .score').text(rating + '/5');
         $('.bonus-section .activated-btn a').attr('href', ctaUrl);
         $('.bonus-section .bonus-button a').attr('href', ctaUrl);
+        
+        $('.bonus-text').text(bonus);
         
         // Make the sticky section visible if hidden (optional)
         // $('.bonus-section').show();

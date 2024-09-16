@@ -133,7 +133,7 @@
         }
 
         .offer .bonus-text {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         .bonus-button .get-bonus-btn {
@@ -156,7 +156,7 @@
                 <span class="stars">★★★★★</span>
             </div>
             <div class="offer">
-                <span class="bonus-text">Bet £10 Get £40</span>
+                <span class="bonus-text"></span>
             </div>
             <div class="offer-activated">
                 <span class="activated-btn">
