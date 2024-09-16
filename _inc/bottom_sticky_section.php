@@ -129,7 +129,7 @@
 
     @media (max-width: 380px) {
         .logo img {
-            max-height: 25px;
+            max-height: 30px;
         }
 
         .offer .bonus-text {
@@ -137,8 +137,8 @@
         }
 
         .bonus-button .get-bonus-btn {
-            padding: 8px 12px;
-            font-size: 0.7em;
+            padding: 12px 14px;
+            font-size: 0.9em;
         }
     }
     </style>
