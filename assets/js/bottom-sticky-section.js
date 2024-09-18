@@ -1,10 +1,9 @@
 jQuery(document).ready(function ($) {
    
-     var currentUrl = window.location.href;
-
-    // Check if the URL contains "betting-sites"
-    if (currentUrl.includes('betting-sites')) {
-
+    var currentUrl = window.location.href;
+    
+    if (currentUrl.includes('betting-sites') && !currentUrl.includes('all-betting-sites')) {
+        
             // Fetch the rating from the element with ID "over_all_ratings"
         var rating = $('#over_all_ratings').text().trim();
         var bonus= $('#bonus_title').text().trim();
