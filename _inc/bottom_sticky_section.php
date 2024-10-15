@@ -29,7 +29,7 @@
     }
 
     .logo img {
-        max-height: 40px;
+        max-height: 70px;
     }
 
     .rating {
@@ -129,7 +129,7 @@
 
     @media (max-width: 380px) {
         .logo img {
-            max-height: 30px;
+            max-height: 50px;
         }
 
         .offer .bonus-text {
