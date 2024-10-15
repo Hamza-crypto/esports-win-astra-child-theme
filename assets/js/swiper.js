@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     /**
      * Swiper for first section "Games"
      */
     // Select all Swiper containers with the same class
     const swiperContainersGame = document.querySelectorAll('.games_swiper');
-    console.log('page loaded');
-    
     if (swiperContainersGame.length) {
         // Function to set `slides-per-view` attribute based on window width
             const windowWidth = window.innerWidth;
-            let slides = 3;
+            let slides = 4;
 
             if (windowWidth < 500) { // Mobile
                 slides = 1;
@@ -24,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log(windowWidth);
             console.log(slides);
             });
+        
+            const swiperContainer= document.querySelectorAll('.swiper');
+            swiperContainer[0].classList.remove('d-none');
+            console.log('games section visible');
     }
 
 
